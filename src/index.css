@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: 'JetBrains Mono', 'Roboto Mono', monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --color-bg: #E4E3E0;
+  --color-ink: #141414;
+  --color-line: #141414;
+  --color-accent: #F27D26;
+  --color-critical: #FF4444;
+  --color-high: #F27D26;
+  --color-medium: #EAB308;
+  --color-low: #22C55E;
+}
+
+:root {
+  --bg: #E4E3E0;
+  --ink: #141414;
+  --line: #141414;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Technical Grid Pattern */
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(20, 20, 20, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 20, 20, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.data-row {
+  border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.data-row:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.col-header {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 11px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.data-value {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ink);
+  border-radius: 0;
+}

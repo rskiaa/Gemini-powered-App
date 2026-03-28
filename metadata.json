@@ -1,0 +1,7 @@
+{
+  "name": "RSKIAA - Responsible AI Intent Bridge",
+  "description": "A universal bridge between human intent and complex systems, converting messy real-world signals into structured, life-saving actions with full accountability.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
